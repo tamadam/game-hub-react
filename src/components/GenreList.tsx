@@ -19,6 +19,7 @@ interface Props {
 const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
 
+  // ha nem statikusan hívjuk be a genres-okat akkor nem kell ez a két sor
   if (error) return null;
   if (isLoading) return <Spinner />;
 
